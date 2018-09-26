@@ -14,8 +14,13 @@ def LoginGithub(username,password):
     elem3 = driver.find_element_by_id("password")
     elem3.send_keys(password)
     elem3.send_keys(Keys.ENTER)
-    print "Login github : PASSED"
-    print "Go to gist page : PASSED"
+    elemx = driver.find_element_by_xpath('//*[@id="js-flash-container"]/div/div')
+    if elemx:
+        return False
+    else:
+        print "Login github : PASSED"
+        print "Go to gist page : PASSED"
+        pass
 
 def AddNewGist():
     elem4 = driver.find_elements_by_xpath('//*[@id="user-links"]/li[1]/a')
@@ -52,9 +57,11 @@ def ViewGist():
 
 driver = webdriver.Chrome()
 driver.get("http://gist.github.com")
-LoginGithub(username,password)
-AddNewGist()
-EditGist()
-DeleteGist()
-ViewGist()
+if LoginGithub(username,password):
+    AddNewGist()
+    EditGist()
+    DeleteGist()
+    ViewGist()
+else:
+    print "Login to Github : FAILED"
 driver.close()
