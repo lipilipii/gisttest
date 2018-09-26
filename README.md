@@ -6,8 +6,8 @@ Please use this command:
 
 
 Personal Note:
-Sorry for the commits, it is shown as Sebastianus's commit instead of mine, Lyvia.
-It is because i'm borrowing my friend's lapto, and this is truly my works. 
+Sorry for the commits, it is shown as someone else's commit instead of mine, Lyvia.
+It is because i'm borrowing my friend's laptop, and this is truly my works. 
 Once again sorry for the inconvinience.
 
 Thank you
